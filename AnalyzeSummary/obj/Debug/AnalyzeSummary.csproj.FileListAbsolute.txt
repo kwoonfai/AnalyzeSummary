@@ -1,0 +1,10 @@
+C:\Users\kwoon\Desktop\Programming\AnalyzeSummary\AnalyzeSummary\bin\Debug\AnalyzeSummary.exe.config
+C:\Users\kwoon\Desktop\Programming\AnalyzeSummary\AnalyzeSummary\bin\Debug\AnalyzeSummary.exe
+C:\Users\kwoon\Desktop\Programming\AnalyzeSummary\AnalyzeSummary\bin\Debug\AnalyzeSummary.pdb
+C:\Users\kwoon\Desktop\Programming\AnalyzeSummary\AnalyzeSummary\obj\Debug\AnalyzeSummary.csprojAssemblyReference.cache
+C:\Users\kwoon\Desktop\Programming\AnalyzeSummary\AnalyzeSummary\obj\Debug\AnalyzeSummary.Form1.resources
+C:\Users\kwoon\Desktop\Programming\AnalyzeSummary\AnalyzeSummary\obj\Debug\AnalyzeSummary.Properties.Resources.resources
+C:\Users\kwoon\Desktop\Programming\AnalyzeSummary\AnalyzeSummary\obj\Debug\AnalyzeSummary.csproj.GenerateResource.cache
+C:\Users\kwoon\Desktop\Programming\AnalyzeSummary\AnalyzeSummary\obj\Debug\AnalyzeSummary.csproj.CoreCompileInputs.cache
+C:\Users\kwoon\Desktop\Programming\AnalyzeSummary\AnalyzeSummary\obj\Debug\AnalyzeSummary.exe
+C:\Users\kwoon\Desktop\Programming\AnalyzeSummary\AnalyzeSummary\obj\Debug\AnalyzeSummary.pdb
