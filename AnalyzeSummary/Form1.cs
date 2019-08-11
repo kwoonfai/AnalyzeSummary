@@ -21,11 +21,12 @@ namespace AnalyzeSummary
             InitializeComponent();
         }
 
-        string fileAnalyze = @"C:\Temp\00D_DEU.htm";
+
+
         private void Button1_Click(object sender, EventArgs e)
         {
             List<string> lines = new List<string>();
-            lines.Add("Company,Symbol,Country,Exchange");
+            lines.Add("Company,Symbol,Country,Exchange,FTCode");
 
             DirectoryInfo d = new DirectoryInfo(@"C:\Users\kwoon\Desktop\Programming\downloadSummary\downloadSummary\bin\Debug");
             FileInfo[] Files = d.GetFiles("*.htm");
@@ -36,10 +37,9 @@ namespace AnalyzeSummary
                 string thisLine = GetCSVLine(file.FullName);
                 if (thisLine == "") continue;
 
-                //finalCSV += thisLine + "\r\n";
                 lines.Add(thisLine);
 
-                Debug.WriteLine(a);
+                if (a % 10 == 0) Debug.WriteLine(a);
                 a++;
             }
 
@@ -56,6 +56,11 @@ namespace AnalyzeSummary
 
             input = System.Text.RegularExpressions.Regex.Unescape(input);
             input = HttpUtility.HtmlDecode(input);
+
+            var ftcodeMatch = Regex.Match(input, @"data-mod-config=""{""xid"":""(.*?)""");
+            if (ftcodeMatch.Success == false) return "";
+            string thisFTCode = ftcodeMatch.Groups[1].Value;
+
 
             string thisCompanyName = ExtractAndParse(ref input, "<h1", "</h1>");
             if (thisCompanyName.Contains(','))
@@ -113,14 +118,9 @@ namespace AnalyzeSummary
 
             foreach (var v in countryExchange)
             {
-                finalString = $"{thisCompanyName},{thisSymbol},{v.Key},{v.Value}";
+                finalString = $"{thisCompanyName},{thisSymbol},{v.Key},{v.Value},{thisFTCode}";
             }
             return finalString;
-        }
-
-        void DumpOutput()
-        {
-            var firstLine = "Company,Symbol,Country,Exchange";
         }
 
         string ExtractAndParse(ref string input, string tag, string endTag)
